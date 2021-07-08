@@ -1,0 +1,31 @@
+The first loop is :
+for (i=0;i<m;i++)
+    n[i]=sc.nextInt();
+This loop is used to take user inputs in the array.
+Its time complexity is O(n)
+
+The secound loop is :
+for(i=0;i<m;i++)
+    System.out.print("\t"+n[i]);
+This loop is used for outputing the original array before any changes.
+Its time complexity is O(n)
+
+The third loop is : 
+for (i=0;i<m/2;i++)
+{
+    t=n[i];
+    n[i]=n[m-1-i];
+    n[m-1-i]=t;
+}
+This loop is used for reversing the original array. Here we can see the loop is iterating at m/2 times.
+Its time complexity is O(n/2)
+
+The final loop is :
+for(i=0;i<m;i++)
+    System.out.print("\t"+n[i]);
+This loop is used to show the new reaaranged array.
+Its time complexity is O(n)
+
+So total time complexity in the loop is 
+-> O(n)+O(n)+O(n/2)+O(n)
+->O(3n/2)
