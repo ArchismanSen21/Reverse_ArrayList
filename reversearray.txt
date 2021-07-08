@@ -1,31 +1,39 @@
-The first loop is :
-for (i=0;i<m;i++)
-    n[i]=sc.nextInt();
-This loop is used to take user inputs in the array.
-Its time complexity is O(n)
+ArrayList is a part of collection framework and present in java.util pacakage.It provide us with dyunamic arrays in java.It may be slower than standard array but is helpful in programs which needs lots of manipulation in the array.
+add(int index, object): It is used to add elements in the end of the ArrayList in a specific index.
+set(): It is use to change elements after inputting.
+remove(object or int index): remove elements from a Arraylist or by using its index to remove objects.
+get(): use in iterating in for loop.
+size(): use to find length of the ArrayList.
+'Integer' is a wrapper class. It is different from int.
 
-The secound loop is :
-for(i=0;i<m;i++)
-    System.out.print("\t"+n[i]);
-This loop is used for outputing the original array before any changes.
-Its time complexity is O(n)
 
-The third loop is : 
-for (i=0;i<m/2;i++)
+First time using both ArrayList and Integer wrapper class.
+
+
+First loop is : 
+
+for (int i=0;i<n;i++)
+    arr.add(sc.nextInt());
+
+Time complexity of the loop : O(n)
+
+Second loop is :
+for(int i=0; i<m/2;i++)
 {
-    t=n[i];
-    n[i]=n[m-1-i];
-    n[m-1-i]=t;
+    Integer t = ar.get(i);
+    ar.set(i,ar.get(m-1-i));
+    ar.set(m-1-i,t);
 }
-This loop is used for reversing the original array. Here we can see the loop is iterating at m/2 times.
-Its time complexity is O(n/2)
 
-The final loop is :
-for(i=0;i<m;i++)
-    System.out.print("\t"+n[i]);
-This loop is used to show the new reaaranged array.
-Its time complexity is O(n)
+Time complexity of the loop : O(n/2)
 
-So total time complexity in the loop is 
--> O(n)+O(n)+O(n/2)+O(n)
-->O(3n/2)
+Third loop :
+for (int i=0;i<ar.size();i++)
+    System.out.print(ar.get(i)+" ");
+
+This loop is used two times in the program so time complexity is : O(2n)
+
+Total time complexity is:
+->O(n)+O(n/2)+O(2n)
+->O(7n/2)
+->O(n)
